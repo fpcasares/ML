@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>OpinApp</title>
+</head>
+<body>
+
+<h1>OpinApp</h1>
+
+<ul>
+{% for item in product_list %}
+  <li>
+  	<p>{{ item.title }}</p>
+  		<a href= {{ Opinion_URL }}>
+		<img src={{ item.thumbnail }} alt={{ item.title }}>
+  </li>
+{% endif %}
+</ul>
+</body>
+</html>
