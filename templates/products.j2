@@ -24,10 +24,14 @@ img:hover {
 {% for product in product_list %}
   <li>
   	<p>{{ product.title }}</p>
-		{# <a href= {{ Opinion_URL }}> #}
+		<a href= /api/v1/get_reviews_by_product_id/{{ product.id }}> 
 		<img src={{ product.thumbnail }} alt={{ product.title }}>
   </li>
 {% endfor %}
 </ul>
 </body>
 </html>
+
+
+
+

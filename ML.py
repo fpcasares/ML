@@ -34,12 +34,6 @@ def get_image_by_product_id(product_id='MLA773625202'):
         picture=response['pictures'][0]['url']
         return (picture)
 
-
-
-
-
-
-
 def get_products_by_name(product_name='kerastase'):
     
     product_name=urllib.parse.quote(product_name)
