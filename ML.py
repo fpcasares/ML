@@ -52,7 +52,7 @@ def get_products_by_name(product_name='kerastase'):
         for item in request_text['results']:
             product_item={'id':item['id'],'title':item['title'],'thumbnail':item['thumbnail'],'image':''}
             product_list.append(product_item)
-
+        '''
         for item in product_list:
             index=product_list.index(item)
             product_request=requests.get(Product_URL.format(item['id']))
@@ -60,6 +60,7 @@ def get_products_by_name(product_name='kerastase'):
                 response=json.loads(product_request.text)
                 picture=response['pictures'][0]['url']
                 product_list[index]['image']=picture
+        '''
         return (product_list)
 
 def get_reviews_by_product_id(product_id='MLA773625202'):
