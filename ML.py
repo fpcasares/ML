@@ -47,7 +47,7 @@ def get_products_by_name(product_name='kerastase'):
     
     if products_request.status_code == 200:
         product_list=list()
-        request_text=json.loads(r.text)
+        request_text=json.loads(products_request.text)
         
         for item in request_text['results']:
             product_item={'id':item['id'],'title':item['title'],'thumbnail':item['thumbnail'],'image':''}
