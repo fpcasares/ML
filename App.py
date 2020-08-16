@@ -11,7 +11,7 @@ def hello_world():
 
 
 @app.route('/api/v1/get_product_by_name/<product_name>')
-def hello(product_name=product_name):
+def hello(product_name):
     product_list=get_products_by_name(product_name)
     return render_template('app.j2', product_list=product_list)
 
