@@ -64,8 +64,7 @@ def get_products_by_name(product_name='kerastase'):
         return (product_list)
 
 def get_reviews_by_product_id(product_id='MLA773625202'):
-    review_request=requests.get(Review_URL.format(id))
-    
+    review_request=requests.get(Review_URL.format(product_id))
     review_list=list()
     if review_request.status_code == 200:
         request_text=json.loads(review_request.text)
@@ -73,40 +72,3 @@ def get_reviews_by_product_id(product_id='MLA773625202'):
             review_item={'content':item['content'],'rate':item['rate']}
             review_list.append(review_item)
         return (review_list)
-        
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
