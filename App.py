@@ -18,9 +18,10 @@ def products_list(product_name):
 @app.route('/api/v1/get_reviews_by_product_id/<product_id>')
 def review_list(product_id):
     review_list=get_reviews_by_product_id(product_id)
-    return render_template('reviews.j2', review_list=review_list)
- 
-
+    if review_list is not []:
+        return render_template('reviews.j2', review_list=review_list)
+    else:
+        return 'Este producto no tiene opiniones'
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0',port='5500')
