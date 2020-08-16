@@ -80,7 +80,7 @@ def get_reviews_by_product_id(product_id='MLA773625202'):
 
 
 
-Product=sys.argv[1]
+
 
 
 
