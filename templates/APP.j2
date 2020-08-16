@@ -8,11 +8,11 @@
 <h1>OpinApp</h1>
 
 <ul>
-{% for item in product_list %}
+{% for product in product_list %}
   <li>
   	<p>{{ item.title }}</p>
-  		<a href= {{ Opinion_URL }}>
-		<img src={{ item.thumbnail }} alt={{ item.title }}>
+		{# <a href= {{ Opinion_URL }}> #}
+		<img src={{ product.thumbnail }} alt={{ product.title }}>
   </li>
 {% endif %}
 </ul>
