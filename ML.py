@@ -27,7 +27,7 @@ def print_time(threadName, delay, counter):
       counter -= 1
 
 def get_image_by_product_id(product_id='MLA773625202'):
-    product_request=requests.get(Product_URL.format(product_id)
+    product_request=requests.get(Product_URL.format(product_id))
 
     if product_request.status_code == 200:
         response=json.loads(product_request.text)
